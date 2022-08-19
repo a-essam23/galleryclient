@@ -1,0 +1,26 @@
+.group-wraper {
+    width: 25%;
+}
+
+.group {
+    width: 100%;
+    height: 100%;
+}
+
+.group-name h3 {
+    color: rgb(0, 21, 41);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.group-image {
+    height: 100%;
+}
+
+.group-image img {
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
