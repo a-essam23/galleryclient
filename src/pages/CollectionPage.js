@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import CollectionList from "../components/collections/CollectionList";
+import CollectionList from "../components/collections/collectionList/CollectionList";
 
 const collectionData = [
     {

@@ -3,7 +3,9 @@ function Preview(props) {
     return (
         <div className="preview-container">
             {props.images.map((image) => (
-                <img src={image.image} alt={image.key} />
+                <div className="preview-image">
+                    <img src={image.image} alt={image.key} />
+                </div>
             ))}
         </div>
     );

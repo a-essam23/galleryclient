@@ -16,7 +16,7 @@ const groupData = [
         image: "https://assets.epicurious.com/photos/5787d8ff1edb4f17303e3ee1/4:6/w_888,h_1332,c_limit/chocolate-mint-18072016.jpg",
     },
 ];
-function HomePage(props) {
+function GroupPage(props) {
     return (
         <section>
             <GroupList groups={groupData} />
@@ -24,4 +24,4 @@ function HomePage(props) {
     );
 }
 
-export default HomePage;
+export default GroupPage;

@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import Card from "../ui/Card";
 import "./Group.css";
-function Group(props) {
+function Group({ title, image }) {
     return (
-        <Link to={"/" + props.title} className="group-wraper">
+        <Link to={"/" + title} className="group-wraper">
             <li className="group">
                 <Card>
                     <div className="group-name">
-                        <h3>{props.title}</h3>
+                        <h3>{title}</h3>
                     </div>
                     <div className="group-image">
-                        <img src={props.image} alt={props.title} />
+                        <img src={image} alt={title} />
                     </div>
                 </Card>
             </li>

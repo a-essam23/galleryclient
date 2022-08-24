@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./Collection.css";
-import Preview from "../ui/Preview";
+import Preview from "../preview/Preview";
 
 const images = [
     {
@@ -22,7 +22,7 @@ const images = [
     },
 ];
 
-function Collection(props) {
+function Collection({ ref_id, image, code }) {
     const [isHovering, setIsHovering] = useState(false);
 
     const handleMouseOver = () => {
@@ -32,28 +32,23 @@ function Collection(props) {
     const handleMouseOut = () => {
         setIsHovering(false);
     };
-    const handleHover = (isHover) => {
-        if (isHover) {
-            return (
-                <div className="collection-preview">
-                    <Preview images={images} />
-                </div>
-            );
-        }
-    };
 
     return (
-        <Link className="collection-wraper" to={props.ref_id}>
-            <li className="collection">
+        <Link to={ref_id}>
+            <div
+                className="collection"
+                onMouseLeave={handleMouseOut}
+                onMouseOver={handleMouseOver}
+            >
                 <div
-                    className="collection-image"
-                    onMouseOver={handleMouseOver}
-                    onMouseLeave={handleMouseOut}
+                    className={`collection-image ${
+                        isHovering ? "collection-image-hover" : ""
+                    }`}
                 >
-                    <img src={props.image} alt={props.code} />
-                    {handleHover(isHovering)}
+                    <img src={image} alt={code} />
                 </div>
-            </li>
+                {isHovering && <Preview images={images} />}
+            </div>
         </Link>
     );
 }
