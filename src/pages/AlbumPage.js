@@ -1,6 +1,7 @@
 import AlbumList from "../components/albums/AlbumList";
 import { useParams } from "react-router-dom";
 import AlbumDetails from "../components/albums/AlbumDetails";
+import MyLayout from "../components/layout/MyLayout";
 
 const albumsData = [
     {
@@ -103,20 +104,22 @@ const albumsData = [
 function AlbumPage(props) {
     const { collection, album } = useParams();
     return (
-        <section>
-            <h2
-                style={{
-                    color: "gold",
-                    fontSize: "8rem",
-                    padding: "0",
-                    margin: "0",
-                    textAlign: "center",
-                }}
-            >
-                {album.toUpperCase()}
-            </h2>
-            <AlbumList albums={albumsData} />
-        </section>
+        <MyLayout>
+            <section>
+                <h2
+                    style={{
+                        color: "gold",
+                        fontSize: "8rem",
+                        padding: "0",
+                        margin: "0",
+                        textAlign: "center",
+                    }}
+                >
+                    {album.toUpperCase()}
+                </h2>
+                <AlbumList albums={albumsData} />
+            </section>
+        </MyLayout>
     );
 }
 

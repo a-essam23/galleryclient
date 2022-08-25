@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import CollectionList from "../components/collections/collectionList/CollectionList";
+import MyLayout from "../components/layout/MyLayout";
 
 const collectionData = [
     {
@@ -102,20 +103,22 @@ const collectionData = [
 function ColletionPage(props) {
     const { collection } = useParams();
     return (
-        <section>
-            <h2
-                style={{
-                    color: "gold",
-                    fontSize: "8rem",
-                    padding: "0",
-                    margin: "0",
-                    textAlign: "center",
-                }}
-            >
-                {collection.toUpperCase()}
-            </h2>
-            <CollectionList collections={collectionData} />
-        </section>
+        <MyLayout>
+            <section>
+                <h2
+                    style={{
+                        color: "gold",
+                        fontSize: "4rem",
+                        padding: "0",
+                        margin: "0",
+                        textAlign: "center",
+                    }}
+                >
+                    {collection.toUpperCase()}
+                </h2>
+                <CollectionList collections={collectionData} />
+            </section>
+        </MyLayout>
     );
 }
 

@@ -3,15 +3,17 @@ import Group from "./Group";
 
 function GroupList(props) {
     return (
-        <ul className="list">
+        <div className="group-list">
             {props.groups.map((group) => (
-                <Group
-                    title={group.title}
-                    image={group.image}
-                    key={group.key}
-                />
+                <div className="group-wraper">
+                    <Group
+                        title={group.title}
+                        image={group.image}
+                        key={group.key}
+                    />
+                </div>
             ))}
-        </ul>
+        </div>
     );
 }
 

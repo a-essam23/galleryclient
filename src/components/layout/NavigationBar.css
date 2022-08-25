@@ -5,8 +5,8 @@
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
+    max-width: 2rem;
+    max-height: 2rem;
 }
 
 .site-title {
@@ -16,5 +16,5 @@
 
 .site-title h3 {
     color: gold;
-    font-size: 5rem;
+    font-size: 3rem;
 }

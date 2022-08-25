@@ -1,0 +1,30 @@
+.admin-layout {
+}
+
+.admin-sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+.admin-group-actions {
+    width: 100%;
+    display: flex;
+}
+
+.admin-group-actions button {
+    margin: 2%;
+    flex-basis: 45%;
+}
+
+.admin-header {
+}
+
+.admin-content {
+    background-color: white;
+    margin: 2%;
+    padding-bottom: 100%;
+}
+
+.admin-footer {
+}

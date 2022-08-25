@@ -3,8 +3,8 @@ import Card from "../ui/Card";
 import "./Group.css";
 function Group({ title, image }) {
     return (
-        <Link to={"/" + title} className="group-wraper">
-            <li className="group">
+        <Link to={"/" + title}>
+            <div className="group">
                 <Card>
                     <div className="group-name">
                         <h3>{title}</h3>
@@ -13,7 +13,7 @@ function Group({ title, image }) {
                         <img src={image} alt={title} />
                     </div>
                 </Card>
-            </li>
+            </div>
         </Link>
     );
 }

@@ -1,4 +1,5 @@
 import GroupList from "../components/groups/GroupList";
+import MyLayout from "../components/layout/MyLayout";
 const groupData = [
     {
         key: "1",
@@ -18,9 +19,11 @@ const groupData = [
 ];
 function GroupPage(props) {
     return (
-        <section>
-            <GroupList groups={groupData} />
-        </section>
+        <MyLayout>
+            <section>
+                <GroupList groups={groupData} />
+            </section>
+        </MyLayout>
     );
 }
 
